@@ -1,4 +1,4 @@
-import sys
+
 #importing BankAccounts class
 from BankAccounts import BankAccounts
 
@@ -29,9 +29,9 @@ def closeAccount():
                 break
 
 
-    except:
+    except Exception as ex:
 #This allows me to print out the type of exeption the program may experience
-        print("Error!", sys.exc_info()[0],"ocurred.")
+        print("Error!", ex, "ocurred.")
 
 #function to display an account details
 def displayAccountDetails():
@@ -46,8 +46,8 @@ def displayAccountDetails():
                 break
 
 
-    except :
-        print("Error!", sys.exc_info()[0],"ocurred.")
+    except Exception as ex:
+        print("Error!", ex, "ocurred.")
 
 #function to deposit  an amount by asking the user to input an account number in which to make the deposit
 def depositAmount():
@@ -69,8 +69,8 @@ def depositAmount():
                 break
 
 
-    except:
-        print("Error!", sys.exc_info()[0], "ocurred.")
+    except Exception as ex:
+        print("Error!", ex, "ocurred.")
 
 
 #function to withdraw an amount by asking the user to input an account number from which to withdraw
@@ -93,8 +93,8 @@ def withdrawAmount():
                 break
 
 
-    except:
-        print("Error!", sys.exc_info()[0],"ocurred.")
+    except Exception as ex:
+        print("Error!", ex,"ocurred.")
 
 #main function to be called from main containing the menu displaying the different choices for the user
 def main():
@@ -125,8 +125,8 @@ def main():
                 break
             else:
                 print("Please enter one of the available choices!")
-        except:
-            print("Error!", sys.exc_info()[0], "ocurred.")
+        except Exception as ex:
+            print("Error!", ex, "ocurred.")
 
 
 if __name__ == "__main__":
